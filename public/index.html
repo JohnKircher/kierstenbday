@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! Your Gift Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Happy Birthday, <span class="name">Kiersten</span>! 🎉</h1>
+            <p>You are really old!</p>
+        </div>
+        
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be added dynamically -->
+        </div>
+        
+        <div class="footer">
+            <p>Love you tons ❤️</p>
+        </div>
+    </div>
+    
+    <!-- Redeem Modal -->
+    <div class="modal" id="redeemModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Redeem Your Gift</h2>
+            <p id="selectedGiftText">You're about to redeem: <span id="giftName"></span></p>
+            <div class="form-group">
+                <label for="password">Enter your birthday password:</label>
+                <input type="password" id="password" placeholder="">
+            </div>
+            <button id="confirmRedeem" class="btn">Redeem Now</button>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
