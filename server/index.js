@@ -11,7 +11,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Path to our redemption database
 const REDEEMED_DB_PATH = path.join(__dirname, 'redeemed.json');
@@ -89,7 +89,7 @@ app.get('/api/redeemed', (req, res) => {
 
 // Serve the frontend
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../public/index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 const PORT = process.env.PORT || 3000;
